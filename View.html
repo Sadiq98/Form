@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/form-validation.css">
+    <link href="keenthemes_files/datatables.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="keenthemes_files/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="keenthemes_files/style.bundle.css" rel="stylesheet" type="text/css" />
+    <title>View Form</title>
+</head>
+
+<body class="d-flex flex-column vh-100">
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand text-white"> <img src="http://www.scaninfotech.com/Images/logo.png"
+                        alt="Scan Infotech"></a>
+                <button type="button" class="navbar-toggler" data-bs-target="#nav-items" data-bs-toggle="collapse">
+                    <span class="navbar-toggler-icon text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="nav-items">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a href="Home.html" class="nav-link active text-white">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Index.html" class="nav-link text-white-50">Index</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--begin::Form-->
+    <main class="flex-grow-1 d-flex justify-content-center align-items-center bg-body">
+
+        <div class="container-fluid ">
+            <form class=" container-fluid" novalidate id="registration_form">
+                <h1 class="form-label my-2"> View From</h1>
+                <div class="row registration_form_validation">
+                    <!-- Row 1 -->
+                    <div class="row mb-3 ">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="fname" class="required fw-semibold fs-6 mb-2">First Name:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" id="fname" name="fname" class="form-control view" required
+                                        minlength="3" maxlength="10" placeholder="Enter Your First Name"
+                                        onkeypress="return isAlphabet(event)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="lname" class="required fw-semibold fs-6 mb-2">Last Name:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" id="lname" name="lname" class="form-control view" required
+                                        minlength="3" maxlength="10" placeholder="Enter Your Last Name"
+                                        onkeypress="return isAlphabet(event)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="country" class="required fw-semibold fs-6 mb-2 ">Country:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <select name="country" id="country" class="form-control view-select" required>
+                                        <option selected value disabled>Select...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="state" class="required fw-semibold fs-6 mb-2">State:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <select name="state" id="state" class="form-control view-select" required>
+                                        <option selected value disabled>Select...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row 3 -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="city" class="required fw-semibold fs-6 mb-2">City:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" id="city" name="city" class="form-control view" required
+                                        minlength="3" maxlength="10" placeholder="Enter Your City Name"
+                                        onkeypress="return isAlphabet(event)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="postal" class="required fw-semibold fs-6 mb-2">Zip/Postal Code:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" id="postal" name="postal" class="form-control view" required
+                                        maxlength="6" minlength="6" placeholder="Enter Your Postal Code"
+                                        onkeypress="return isNumber(event)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row 4 -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="email" class="required fw-semibold fs-6 mb-2">E-mail:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="email" id="email" name="email" class="form-control view" required=""
+                                        placeholder="Enter Your Email Id">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="mobile" class="required fw-semibold fs-6 mb-2">Mobile No:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" id="mobile" name="mobile" class="form-control view" required
+                                        minlength="10" maxlength="10" placeholder="Enter Your Mobile Number"
+                                        onkeypress="return isNumber(event)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row 5 -->
+                    <div class="row mb-3">
+
+                        <div class="col-md-1 me-md-12">
+                            <label for="address" class="required fw-semibold fs-6 mb-2">Address:</label>
+                        </div>
+                        <div class="col-md-10 ms-md-5">
+                            <textarea type="text" id="address" name="address" class="form-control view" rows="2"
+                                required="" onkeypress="return isAlphaNumeric(event)" minlength="5"
+                                placeholder="Enter Your Address"></textarea>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <!-- Row 6 -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="username" class="required fw-semibold fs-6 mb-2">User Name:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" id="username" name="username" class="form-control view"
+                                        minlength="3" maxlength="10" required placeholder="Enter Your Username"
+                                        onkeypress="return isAlphaNumeric(event)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="password" class="required fw-semibold fs-6 mb-2 ">Password:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="input-group">
+                                        <input type="password" class="form-control view"
+                                            placeholder="Enter Your Password" required id="password" name="password">
+                                        <span class="input-group-text" id="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-eye-fill" onclick="togglePassword()"
+                                                viewBox="0 0 16 16">
+                                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
+                                                <path
+                                                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row 7 -->
+                    <div class="row mb-3">
+                        <div class="col-md-6" id="hdnCpass">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="cpassword" class="required fw-semibold fs-6 mb-2">Confirm
+                                        Password:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="input-group">
+                                        <input type="password" class="form-control view"
+                                            placeholder="Confirm Your Password" id="cpassword" name="cpassword"
+                                            required>
+                                        <span class="input-group-text">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-eye-fill" onclick="toggleCpassword()"
+                                                viewBox="0 0 16 16">
+                                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
+                                                <path
+                                                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 my-2" id="btnStatus">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="form-check-label view" for="btnInactive" name="status">
+                                        Status:
+                                    </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <input class="form-check-input radio" type="radio" name="flexRadioDefault"
+                                                id="btnActive" checked>
+                                            <label class="form-check-label" for="btnActive">
+                                                Active </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input class="form-check-input radio" type="radio" name="flexRadioDefault"
+                                                id="btnInactive">
+                                            <label class="form-check-label" for="btnInactive">
+                                                Inactive </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Buttons -->
+                <div class="text-end">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        onclick="document.location='Index.html'">Close</button>
+                    <button type="button" id="deleteView" class="btn btn-danger"
+                        onclick="return viewDelete()">Delete</button>
+                    <button type="button" id="editView" class="btn btn-warning">Edit</button>
+                    <button type="button" class="btn btn-danger d-none" id="resetView" onclick="Reset()">Reset</button>
+                    <button type="submit" id="submitView" onclick="viewSubmit()"
+                        class="btn btn-success d-none">Submit</button>
+
+                </div>
+                <input type="hidden" id="hdnsrno">
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white-50 p-2 text-center">
+        <div class="container">
+            <p>Sadiq Shaikh &copy;</p>
+        </div>
+    </footer>
+
+    <!-- View Delete Modal -->
+    <div class="modal fade" tabindex="-3" id="viewdeleteModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete the form?</p>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-danger" id="btnDelete" value="Yes">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close"
+                        id="btnNodelete">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <!--end::Form-->
+
+    <script>var hostUrl = "keenthemes_files";</script>
+    <script src="keenthemes_files/jquery-1.12.4.min.js"></script>
+    <script src="keenthemes_files/plugins.bundle.js"></script>
+    <script src="keenthemes_files/datatables.bundle.js"></script>
+    <script src="js/FormValidation.js"></script>
+    <script src="js/country.js"></script>
+    <script src="Index.js"></script>
+    <script src="View.js"></script>
+    <script src="js/togglePassword.js"></script>
+    <script src="js/Regex.js"></script>
+
+
+</body>
+
+</html>
