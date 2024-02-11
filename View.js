@@ -92,7 +92,7 @@ function viewSubmit() {
 
     updateLocalStorage();
     updateTableData();
-    window.location = 'Index.html';
+    window.location = 'index.html';
     setTimeout(function () {
         $('#updateModal').modal('show');
     }, 500);
@@ -121,7 +121,7 @@ function viewDelete(srno) {
         localStorage.clear();
         localStorage.setItem('Row', JSON.stringify(data_arr)); // Store the updated data array in local storage
         updateTableData();
-        window.location = 'Index.html'
+        window.location = 'index.html'
         // Show the deleteSuccessModal after a delay
         setTimeout(function () {
             $('#deleteSuccessModal').modal('show');
