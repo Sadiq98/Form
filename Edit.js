@@ -79,7 +79,7 @@ function updateData() {
 
     updateLocalStorage();
     updateTableData();
-    window.location = 'Index.html';
+    window.location = 'index.html';
     setTimeout(function () {
         $('#updateModal').modal('show');
     }, 500);
