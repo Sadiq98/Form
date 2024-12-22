@@ -26,7 +26,7 @@ function AddData(duplicateModal) {
         })
         localStorage.setItem("Row", JSON.stringify(data_arr));
         updateTableData()
-        // window.location='Index.html';
+        // window.location='index.html';
         // $('#successModal').modal('show');
     }
     else {
